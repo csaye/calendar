@@ -2,6 +2,14 @@
   background: #efefef;
 }
 
+.Day p {
+  margin: 0;
+}
+
 .today {
   background: red;
+}
+
+.Day input {
+  width: calc(100% - 10px);
 }
