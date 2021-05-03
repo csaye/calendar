@@ -1,0 +1,11 @@
+.Calendar .month {
+  display: flex;
+  flex-direction: horizontal;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+
+.Calendar .title-box {
+  margin-bottom: 15px;
+  background: #bbb;
+}

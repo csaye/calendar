@@ -3,6 +3,7 @@ import firebase from 'firebase/app';
 import './SignIn.css';
 
 function SignIn() {
+
   // opens google sign in popup
   function signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
