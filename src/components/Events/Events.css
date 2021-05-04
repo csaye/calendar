@@ -1,6 +1,15 @@
 .Events {
+  width: fit-content;
   background: #efefef;
   border-radius: 10px;
-  margin: 15px;
+  margin: 15px auto;
   padding: 10px;
+}
+
+.Events h1 {
+  margin: 0;
+}
+
+.Events p {
+  margin: 10px 0;
 }

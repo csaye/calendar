@@ -33,7 +33,8 @@ function Day(props) {
     // update firebase with note
     const id = getId();
     await firebase.firestore().collection(uid).doc(id).set({
-      note: newNote
+      note: newNote,
+      date
     });
   }
 

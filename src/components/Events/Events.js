@@ -5,10 +5,12 @@ import firebase from 'firebase/app';
 
 import './Events.css';
 
+const now = new Date();
+
 function Events() {
   const uid = firebase.auth().currentUser.uid;
   const eventsRef = firebase.firestore().collection(uid);
-  const eventsQuery = eventsRef.where('note', '!=', '');
+  const eventsQuery = eventsRef.where('date', '>', now).orderBy('date');
   const [events] = useCollectionData(eventsQuery, { idField: 'id' });
 
   return (
@@ -20,7 +22,11 @@ function Events() {
           {
             events.length > 0 ?
             events.map(e =>
-              <p>{e.id} {e.note}</p>
+              <>
+                {
+                  e.note && <p>{e.date.toDate().toLocaleDateString()} — {e.note}</p>
+                }
+              </>
             ) :
             <p>No events yet</p>
           }
