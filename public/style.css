@@ -1,5 +1,14 @@
+button {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
 .calendar-box {
-  width: calc((100% - 10px * 7) / 7);
+  width: calc((100% - 20px * 7) / 7);
+  height: 80px;
   margin: 5px;
-  height: 60px;
+  padding: 5px;
 }

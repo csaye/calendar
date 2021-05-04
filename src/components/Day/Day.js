@@ -5,39 +5,46 @@ import firebase from 'firebase/app';
 import './Day.css';
 
 function Day(props) {
+  const date = props.date;
+
   const [note, setNote] = useState('');
   const [placeholder, setPlaceholder] = useState('...');
 
-  const date = props.date;
-  const year = date.getFullYear();
-  const month = date.getMonth();
-  const day = date.getDate();
-
   const uid = firebase.auth().currentUser.uid;
-  const id = `${year}-${month}-${day}`;
-  const docRef = firebase.firestore().collection(uid).doc(id);
 
-  const monthName = date.toLocaleString('default', { month: 'long' });
+  // returns id of day
+  function getId() {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const day = date.getDate();
+    return `${year}-${month}-${day}`;
+  }
 
   function isToday() {
     const now = new Date();
-    return now.getFullYear() === year
-      && now.getMonth() === month
-      && now.getDate() === day;
+    return now.getFullYear() === date.getFullYear()
+      && now.getMonth() === date.getMonth()
+      && now.getDate() === date.getDate();
   }
 
   // update note in firebase
   async function updateNote(newNote) {
     setNote(newNote);
-    await docRef.set({
+    // update firebase with note
+    const id = getId();
+    await firebase.firestore().collection(uid).doc(id).set({
       note: newNote
     });
   }
 
   // gets note from firebase
   async function getNote() {
+    // set placeholder
+    setPlaceholder('...');
+    setNote('');
     // get document
-    await docRef.get().then(doc => {
+    const id = getId();
+    await firebase.firestore().collection(uid).doc(id).get().then(doc => {
       if (doc.exists) {
         const docData = doc.data();
         setNote(docData.note);
@@ -48,13 +55,14 @@ function Day(props) {
   }
 
   useEffect(() => {
+    // get note
     getNote();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [date]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className={`Day calendar-box ${isToday() && 'today'}`}>
-      <p>{monthName} {day}</p>
-      <input
+      <p>{date.toLocaleString('default', { month: 'long' })} {date.getDate()}</p>
+      <textarea
         placeholder={placeholder}
         value={note}
         onChange={e => updateNote(e.target.value)}

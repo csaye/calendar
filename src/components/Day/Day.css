@@ -1,5 +1,7 @@
 .Day {
   background: #efefef;
+  display: flex;
+  flex-flow: column;
 }
 
 .Day p {
@@ -10,6 +12,6 @@
   background: red;
 }
 
-.Day input {
-  width: calc(100% - 10px);
+.Day textarea {
+  flex-grow: 1;
 }
