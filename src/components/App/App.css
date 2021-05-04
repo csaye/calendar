@@ -1,0 +1,7 @@
+.App {
+  min-height: 100%;
+  background: radial-gradient(circle, rgba(43,35,182,0.6) 0%, rgba(29,9,91,0.6) 23%, rgba(6,90,138,0.6) 96%), url('/src/img/background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
