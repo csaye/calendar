@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Day from '../Day/Day.js';
 import Header from '../Header/Header.js';
+import Events from '../Events/Events.js';
 
 import './Calendar.css';
 
@@ -93,6 +94,7 @@ function Calendar() {
           )
         }
       </div>
+      <Events />
     </div>
   )
 }
