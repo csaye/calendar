@@ -5,7 +5,7 @@
   margin: 5px;
 }
 
-.Calendar .title-box {
+.Calendar .title-box, .Calendar .title-box-short, .Calendar .title-box-tiny {
   margin-bottom: 15px;
   background: #bbb;
   border-radius: 5px;
@@ -13,4 +13,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.Calendar .title-box { display: none; }
+.Calendar .title-box-short { display: none; }
+.Calendar .title-box-tiny { display: inherit; }
+
+@media (min-width: 430px) {
+  .Calendar .title-box { display: none; }
+  .Calendar .title-box-short { display: inherit; }
+  .Calendar .title-box-tiny { display: none; }
+}
+
+@media (min-width: 890px) {
+  .Calendar .title-box { display: inherit; }
+  .Calendar .title-box-short { display: none; }
+  .Calendar .title-box-tiny { display: none; }
 }

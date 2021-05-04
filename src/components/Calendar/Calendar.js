@@ -44,7 +44,9 @@ function Calendar() {
   }
 
   // initialize calendar boxes
-  const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const dayNamesShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const dayNamesTiny = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
   const fillers = [];
   const days = [];
   for (let filler = 0; filler < monthOffset(); filler++) fillers.push(filler);
@@ -56,8 +58,24 @@ function Calendar() {
       <div className="month">
         {
           // day names
-          dayNames.map(n =>
-              <div key={`dayname-${n}`} className="title-box calendar-box">
+          dayNames.map((n, i) =>
+              <div key={`dayname-${i}`} className="title-box calendar-box">
+                <h3>{n}</h3>
+              </div>
+          )
+        }
+        {
+          // short day names
+          dayNamesShort.map((n, i) =>
+              <div key={`daynameshort-${i}`} className="title-box-short calendar-box">
+                <h3>{n}</h3>
+              </div>
+          )
+        }
+        {
+          // tiny day names
+          dayNamesTiny.map((n, i) =>
+              <div key={`daynametiny-${i}`} className="title-box-tiny calendar-box">
                 <h3>{n}</h3>
               </div>
           )
