@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Calendar
+
+Event scheduling in a simple interface.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
