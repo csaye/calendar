@@ -1,0 +1,32 @@
+.SignIn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SignIn .center-box {
+  background: #efefef;
+  border-radius: 10px;
+  box-shadow: 0 0 2px #fff;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SignIn h1 {
+  margin: 0;
+}
+
+.SignIn button {
+  padding: 10px;
+  font-size: 16px;
+  transition: 0.25s;
+  border-radius: 10px;
+}
+
+.SignIn button:hover {
+  transform: scale(1.05);
+}
