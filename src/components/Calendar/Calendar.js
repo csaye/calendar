@@ -53,7 +53,7 @@ function Calendar() {
   for (let day = 0; day < daysInMonth(); day++) days.push(day + 1);
 
   return (
-    <div className="Calendar">
+    <div className="Calendar background">
       <Header year={year} month={month} backMonth={backMonth} forwardMonth={forwardMonth} />
       <div className="month">
         {

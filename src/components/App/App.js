@@ -18,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="background-image" />
       {
         firebase.auth().currentUser ?
         <Calendar /> :

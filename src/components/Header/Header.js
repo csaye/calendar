@@ -1,5 +1,8 @@
+import firebase from 'firebase/app';
+
 import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined';
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 import './Header.css';
 
@@ -13,12 +16,16 @@ function Header(props) {
 
   return (
     <div className="Header">
-      <button className="arrow-button" onClick={backMonth}>
+      <button className="icon-button" onClick={backMonth}>
         <ArrowBackIosOutlinedIcon />
       </button>
       <h1>{monthName} {year}</h1>
-      <button className="arrow-button" onClick={forwardMonth}>
+      <button className="icon-button" onClick={forwardMonth}>
         <ArrowForwardIosOutlinedIcon />
+      </button>
+      <span className="flex-fill" />
+      <button className="icon-button" onClick={() => firebase.auth().signOut()}>
+        <ExitToAppIcon />
       </button>
     </div>
   );
