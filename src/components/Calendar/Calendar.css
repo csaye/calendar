@@ -8,4 +8,9 @@
 .Calendar .title-box {
   margin-bottom: 15px;
   background: #bbb;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

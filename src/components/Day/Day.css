@@ -2,6 +2,8 @@
   background: #efefef;
   display: flex;
   flex-flow: column;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #333;
 }
 
 .Day p {

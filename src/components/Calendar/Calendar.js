@@ -57,7 +57,9 @@ function Calendar() {
         {
           // day names
           dayNames.map(n =>
-              <div key={`dayname-${n}`} className="title-box calendar-box">{n}</div>
+              <div key={`dayname-${n}`} className="title-box calendar-box">
+                <h3>{n}</h3>
+              </div>
           )
         }
         {
