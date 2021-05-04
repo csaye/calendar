@@ -1,0 +1,15 @@
+.Header {
+  background: #efefef;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.Header .arrow-button {
+  padding: 3px 2px 0 2px;
+  margin: 0 10px;
+}
+
+.Header h1 {
+  margin: 0;
+}
