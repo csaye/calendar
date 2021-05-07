@@ -4,6 +4,11 @@
   border-radius: 10px;
   margin: 15px auto;
   padding: 10px;
+  transition: 0.25s;
+}
+
+.Events:hover {
+  transform: scale(1.05);
 }
 
 .Events h1 {

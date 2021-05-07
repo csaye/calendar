@@ -1,5 +1,6 @@
 {
   "name": "calendar",
+  "homepage": "https://csaye.com/calendar/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

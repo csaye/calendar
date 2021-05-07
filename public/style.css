@@ -19,4 +19,9 @@ textarea {
   height: 80px;
   margin: 5px;
   padding: 10px;
+  transition: 0.25s;
+}
+
+.calendar-box:hover {
+  transform: scale(1.03);
 }

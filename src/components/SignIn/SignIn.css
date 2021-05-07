@@ -7,17 +7,33 @@
 
 .SignIn .center-box {
   background: #efefef;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 2px #fff;
   padding: 20px;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  transition: 0.25s;
+}
+
+.SignIn .center-box:hover {
+  transform: scale(1.03);
 }
 
 .SignIn h1 {
   margin: 0;
+}
+
+.SignIn img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.SignIn p {
+  font-style: italic;
+  color: #333;
+  margin: 0 0 10px 0;
 }
 
 .SignIn button {
@@ -28,5 +44,5 @@
 }
 
 .SignIn button:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }

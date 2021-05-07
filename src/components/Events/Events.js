@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 import firebase from 'firebase/app';
@@ -19,17 +18,17 @@ function Events() {
       {
         events ?
         <>
-          {
-            events.length > 0 ?
-            events.map(e =>
-              <>
-                {
-                  e.note && <p>{e.date.toDate().toLocaleDateString()} — {e.note}</p>
-                }
-              </>
-            ) :
-            <p>No events yet</p>
-          }
+        {
+          events.length > 0 ?
+          events.map((e, i) =>
+            <p key={`note-${i}`}>
+              {
+                e.note && <>{e.date.toDate().toLocaleDateString()} — {e.note}</>
+              }
+            </p>
+          ) :
+          <p>No events yet</p>
+        }
         </> :
         <p>Loading events...</p>
       }
