@@ -1,6 +1,6 @@
 # Calendar
 
-Event scheduling in a simple interface.
+Event scheduling in a simple interface. Try it here: [csaye.com/calendar](https://csaye.com/calendar)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
