@@ -23,7 +23,7 @@ function Events() {
           events.map((e, i) =>
             <p key={`note-${i}`}>
               {
-                e.note && <>{new Date(e.id).toLocaleDateString()} — {e.note}</>
+                e.note && <>{new Date(e.id).toLocaleDateString()} • {e.note}</>
               }
             </p>
           ) :
