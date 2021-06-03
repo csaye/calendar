@@ -64,6 +64,7 @@ function Day(props) {
     <div className={`Day calendar-box ${isToday() && 'today'}`}>
       <p>{date.toLocaleString('default', { month: 'long' })} {date.getDate()}</p>
       <textarea
+        spellCheck="false"
         placeholder={placeholder}
         value={note}
         onChange={e => updateNote(e.target.value)}
