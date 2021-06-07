@@ -1,10 +1,16 @@
-# Calendar
+# Calendar <img height="32px" src="https://user-images.githubusercontent.com/27871609/120963712-ec252f80-c716-11eb-8a13-ddef5af2ced6.png">
 
-Event scheduling in a simple interface. Try it here: [csaye.com/calendar](https://csaye.com/calendar)
+Event scheduling in a simple interface.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Try it here: [csaye.com/calendar](https://csaye.com/calendar)
+
+<a href="https://csaye.com/calendar">
+  <img width="512px" src="https://user-images.githubusercontent.com/27871609/120962189-1b866d00-c714-11eb-9ff4-0aaab1ab8565.png">
+</a>
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
